@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overripe Privacy Policy</title>
+<style>
+  :root {
+    --bg: #FFF9F3;
+    --surface: #FFFFFF;
+    --text: #3B2A22;
+    --text-muted: #8A7364;
+    --accent: #E8734A;
+    --accent-soft: #F3DFD2;
+    --border: #EDE0D4;
+    --shadow: 0 1px 2px rgba(59, 42, 34, 0.04), 0 8px 24px rgba(59, 42, 34, 0.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #241B15;
+      --surface: #2E2119;
+      --text: #F3E9DD;
+      --text-muted: #C2AC9A;
+      --accent: #F0925F;
+      --accent-soft: #3A2B20;
+      --border: #4A382C;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #241B15;
+    --surface: #2E2119;
+    --text: #F3E9DD;
+    --text-muted: #C2AC9A;
+    --accent: #F0925F;
+    --accent-soft: #3A2B20;
+    --border: #4A382C;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Karla", -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  header.masthead {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+
+  .fruit-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 50% 50% 50% 4px;
+    background: linear-gradient(155deg, var(--accent), #C9491F 85%);
+    flex-shrink: 0;
+    position: relative;
+  }
+  .fruit-mark::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 15px;
+    width: 3px;
+    height: 10px;
+    border-radius: 2px;
+    background: #6B8F4E;
+    transform: rotate(18deg);
+  }
+
+  .wordmark {
+    font-family: "Fredoka", "Karla", sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: 0.01em;
+  }
+
+  h1 {
+    font-family: "Fredoka", "Karla", sans-serif;
+    font-weight: 600;
+    font-size: clamp(28px, 5vw, 38px);
+    line-height: 1.15;
+    text-wrap: balance;
+    margin: 18px 0 6px;
+  }
+
+  .meta {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 36px;
+  }
+
+  .lede {
+    font-size: 17px;
+    color: var(--text);
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
+    margin: 0 0 40px;
+    max-width: 62ch;
+  }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 48px;
+    box-shadow: var(--shadow);
+  }
+  nav.toc .label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    display: block;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 24px;
+  }
+  nav.toc li { break-inside: avoid; margin-bottom: 6px; }
+  nav.toc a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14.5px;
+  }
+  nav.toc a:hover { color: var(--accent); }
+  nav.toc a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+  section {
+    margin-bottom: 40px;
+    scroll-margin-top: 24px;
+  }
+
+  h2 {
+    font-size: 21px;
+    font-weight: 700;
+    border-left: 3px solid var(--accent-soft);
+    padding-left: 16px;
+    margin: 0 0 14px;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 22px 0 8px;
+  }
+
+  p { margin: 0 0 14px; max-width: 68ch; }
+  p:last-child { margin-bottom: 0; }
+
+  ul { margin: 0 0 14px; padding-left: 22px; max-width: 66ch; }
+  li { margin-bottom: 6px; }
+
+  .data-table {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 4px;
+    margin: 18px 0 20px;
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 480px; }
+  th {
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    font-weight: 600;
+    padding: 12px 14px 8px;
+  }
+  td { padding: 10px 14px; border-top: 1px solid var(--border); vertical-align: top; }
+  td.service { font-weight: 700; white-space: nowrap; }
+
+  code {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+    background: var(--accent-soft);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.88em;
+  }
+
+  a { color: var(--accent); }
+
+  .callout {
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 14.5px;
+    margin: 0 0 14px;
+  }
+  .callout strong { display: block; margin-bottom: 3px; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13.5px;
+  }
+
+  @media (max-width: 480px) {
+    nav.toc ol { columns: 1; }
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="fruit-mark" aria-hidden="true"></div>
+    <span class="wordmark">Overripe</span>
+  </header>
+
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated September 18, 2026</p>
+
+  <p class="lede">Overripe is a single-player puzzle game with no account and no chat. This page explains, plainly, the handful of things the app and the services it relies on know about you.</p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <span class="label">On this page</span>
+    <ol>
+      <li><a href="#collect">1. What we collect</a></li>
+      <li><a href="#local">2. What never leaves your device</a></li>
+      <li><a href="#third-parties">3. Third-party services</a></li>
+      <li><a href="#purchases">4. Purchases</a></li>
+      <li><a href="#choices">5. Your choices</a></li>
+      <li><a href="#children">6. Children's privacy</a></li>
+      <li><a href="#retention">7. Data retention</a></li>
+      <li><a href="#changes">8. Changes to this policy</a></li>
+      <li><a href="#contact">9. Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="collect">
+    <h2>1. What we collect</h2>
+    <p>Overripe uses Firebase Analytics and Google AdMob, both part of Google. Between them, they automatically collect standard mobile analytics and advertising data: a device/advertising identifier, general device information (model, OS version), approximate location derived from IP address, and app usage events.</p>
+    <p>The usage events specific to this app are limited to gameplay statistics - nothing you type, nothing personal:</p>
+    <div class="data-table">
+      <table>
+        <tr><th>Event</th><th>What it tells us</th></tr>
+        <tr><td>Run started / ended</td><td>Game mode, score, turns played, how long the run lasted</td></tr>
+        <tr><td>Fruit harvested</td><td>Harvest size and value, sampled from a subset of runs</td></tr>
+        <tr><td>Retry tapped</td><td>How quickly you started a new run after one ended</td></tr>
+        <tr><td>Tutorial completed</td><td>Whether the onboarding walkthrough was finished</td></tr>
+      </table>
+    </div>
+    <p>We use this only to understand whether the game is fun and where players get stuck. We do not collect your name, email address, photos, contacts, or location beyond the coarse, IP-derived estimate Google's SDKs generate automatically.</p>
+  </section>
+
+  <section id="local">
+    <h2>2. What never leaves your device</h2>
+    <p>Your best scores, run history, Daily Challenge results, and the "show numbers on fruit" setting are stored only in the app's local storage on your device (Android DataStore). We never see this data, and it is deleted the moment you uninstall the app.</p>
+  </section>
+
+  <section id="third-parties">
+    <h2>3. Third-party services</h2>
+    <p>Overripe has no server of its own. Every network request the app makes goes to one of the following, each governed by its own privacy policy:</p>
+    <div class="data-table">
+      <table>
+        <tr><th>Service</th><th>Used for</th></tr>
+        <tr><td class="service">Firebase Analytics</td><td>The gameplay statistics described above</td></tr>
+        <tr><td class="service">Google AdMob</td><td>Showing the interstitial ad that appears after every third completed run, for players who haven't purchased ad removal</td></tr>
+        <tr><td class="service">Google Play Billing</td><td>Processing the one-time "Remove Ads" purchase</td></tr>
+      </table>
+    </div>
+    <p>All three are Google products, covered by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. Play Billing purchases are handled entirely by Google Play - Overripe never sees your payment card details.</p>
+  </section>
+
+  <section id="purchases">
+    <h2>4. Purchases</h2>
+    <p>The one in-app purchase, Remove Ads, is a one-time, non-consumable purchase processed by Google Play. We store only a single yes/no flag - whether you've bought it - so the app knows to stop requesting ads. That flag lives in the same on-device storage described in Section 2, and is separately re-confirmed against your Google Play purchase history each time the app starts, so the purchase survives reinstalls.</p>
+  </section>
+
+  <section id="choices">
+    <h2>5. Your choices</h2>
+    <ul>
+      <li><strong>Turn off ad personalization</strong> at the device level, in your Google Account's <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">Data &amp; Privacy</a> settings.</li>
+      <li><strong>Remove ads entirely</strong> with the one-time in-app purchase, from the app's Settings screen.</li>
+      <li><strong>Reset your advertising ID</strong> in your device's system settings at any time.</li>
+      <li><strong>Delete everything</strong> by uninstalling the app, which removes all local data immediately.</li>
+    </ul>
+  </section>
+
+  <section id="children">
+    <h2>6. Children's privacy</h2>
+    <p>Overripe is not directed at children under 13, and we do not knowingly collect personal information from them. If you believe a child has provided us data through the third-party services above, please contact us and we'll help you address it through Google's own tools.</p>
+  </section>
+
+  <section id="retention">
+    <h2>7. Data retention</h2>
+    <p>We don't operate a database of our own, so we don't decide retention periods for analytics or advertising data - that's governed by Firebase's and AdMob's own retention settings, documented in Google's Privacy Policy. On-device data (Section 2) is retained for as long as the app remains installed.</p>
+  </section>
+
+  <section id="changes">
+    <h2>8. Changes to this policy</h2>
+    <p>If this policy changes in a meaningful way, we'll update the "Last updated" date at the top of this page. Continuing to use Overripe after a change means you accept the update.</p>
+  </section>
+
+  <section id="contact">
+    <h2>9. Contact</h2>
+    <div class="callout">
+      <strong>Questions about this policy?</strong>
+      Reach the developer at <a href="mailto:brightbuild.dev@gmail.com">brightbuild.dev@gmail.com</a>.
+    </div>
+  </section>
+
+  <footer>
+    Overripe is developed and published independently. This policy covers the Overripe Android app only.
+  </footer>
+</div>
+</body>
+</html>
